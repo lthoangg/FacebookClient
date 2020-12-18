@@ -12,8 +12,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MenuFragment fragment = new MenuFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.mainActivity, fragment).commit();
+//        MenuFragment fragment = new MenuFragment();
+        NotificationFragment nfragment = new NotificationFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.mainActivity, nfragment).commit();
         Log.i(TAG, "onCreate()'ed");
     }
 
