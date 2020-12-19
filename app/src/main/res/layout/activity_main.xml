@@ -19,7 +19,9 @@
         app:tabGravity="fill"
         app:tabIndicator="@color/black"
         app:tabMode="fixed"
-        app:tabTextColor="@color/black"></com.google.android.material.tabs.TabLayout>
+        app:tabTextColor="@color/black">
+
+    </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
