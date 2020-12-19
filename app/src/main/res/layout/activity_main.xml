@@ -3,26 +3,27 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:orientation="vertical"
-    android:id="@+id/mainActivity">
+    tools:context=".MainActivity">
+
+    <include layout="@layout/appbar" />
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabGravity="fill"
-        app:tabMode="fixed"
-        android:id="@+id/tabLayout"
         android:background="@color/white"
-        app:tabTextColor="@color/black"
-        app:tabIndicator="@color/black">
-    </com.google.android.material.tabs.TabLayout>
-  
+        app:tabGravity="fill"
+        app:tabIndicator="@color/black"
+        app:tabMode="fixed"
+        app:tabTextColor="@color/black"></com.google.android.material.tabs.TabLayout>
+
     <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
         android:id="@+id/viewPager"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     </androidx.viewpager.widget.ViewPager>
