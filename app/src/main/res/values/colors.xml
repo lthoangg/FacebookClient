@@ -10,4 +10,6 @@
     <color name='grey'>#808080</color>
     <color name='red'>#FF0000</color>
     <color name="lightgrey">#E5E5E5</color>
+    <color name="blue">#0078F6</color>
+    <color name="dark_blue">#055EBB</color>
 </resources>
