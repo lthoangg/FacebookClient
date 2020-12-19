@@ -1,21 +1,35 @@
 package vn.edu.usth.facebookclient;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.util.Log;
 
+import com.google.android.material.tabs.TabLayout;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Facebook client";
 
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
+    private int[] tabIcons = {R.drawable.home, R.drawable.notifi, R.drawable.menu};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        MenuFragment fragment = new MenuFragment();
-        NotificationFragment nfragment = new NotificationFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.mainActivity, nfragment).commit();
+
+      
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
+        for (int i = 0; i < 3; i++){
+            tabLayout.getTabAt(i).setIcon(tabIcons[i]);
+        }
         Log.i(TAG, "onCreate()'ed");
+
     }
 
     @Override
