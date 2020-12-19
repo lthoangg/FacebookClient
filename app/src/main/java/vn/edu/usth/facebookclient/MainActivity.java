@@ -2,6 +2,7 @@ package vn.edu.usth.facebookclient;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private Toolbar toolbar;
     private int[] tabIcons = {R.drawable.home, R.drawable.notifi, R.drawable.menu};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,8 +31,10 @@ public class MainActivity extends AppCompatActivity {
             tabLayout.getTabAt(i).setIcon(tabIcons[i]);
         }
         Log.i(TAG, "onCreate()'ed");
-
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
+
 
     @Override
     protected void onStart() {
