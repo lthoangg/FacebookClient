@@ -18,7 +18,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="-5dp"
-            android:background="@drawable/logo" />
+            android:background="@drawable/logoo" />
 
         <ImageButton
             android:id="@+id/search"
