@@ -150,13 +150,13 @@
                             android:layout_height="46dp"
                             android:layout_weight="1"
                             android:textStyle="bold"
-                            android:text="@string/name" />
+                            android:text="LQN" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/time" />
+                            android:text="12h" />
 
                     </LinearLayout>
 
@@ -171,7 +171,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/caption" />
+                    android:text="Gonna dieeeeee" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -238,13 +238,13 @@
                             android:layout_height="46dp"
                             android:layout_weight="1"
                             android:textStyle="bold"
-                            android:text="@string/name" />
+                            android:text="LTH" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/time" />
+                            android:text="3h" />
 
                     </LinearLayout>
 
@@ -259,12 +259,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/caption" />
+                    android:text="Dyinggggg" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/demo" />
+                    android:src="@drawable/download" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -326,13 +326,13 @@
                             android:layout_height="46dp"
                             android:layout_weight="1"
                             android:textStyle="bold"
-                            android:text="@string/name" />
+                            android:text="@DTK" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/time" />
+                            android:text="4m" />
 
                     </LinearLayout>
 
@@ -347,12 +347,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/caption" />
+                    android:text="Still dyinggggg" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="251dp"
-                    android:src="@drawable/demo" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -414,13 +410,13 @@
                             android:layout_height="46dp"
                             android:layout_weight="1"
                             android:textStyle="bold"
-                            android:text="@string/name" />
+                            android:text="NTT" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text="@string/time" />
+                            android:text="Just now" />
 
                     </LinearLayout>
 
@@ -435,12 +431,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/caption" />
+                    android:text="Yayyyyyy" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/demo" />
+                    android:src="@drawable/Capture" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
