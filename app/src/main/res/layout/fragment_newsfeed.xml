@@ -16,47 +16,429 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <fragment
-                android:id="@+id/header"
-                android:name="vn.edu.usth.facebookclient.HeaderFragment"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
 
-            <fragment
-                android:id="@+id/create_post"
-                android:name="vn.edu.usth.facebookclient.CreatePostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="63dp"
+                    android:orientation="horizontal">
 
-            <fragment
-                android:id="@+id/post"
-                android:name="vn.edu.usth.facebookclient.PostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/avatar"
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:background="@drawable/avatar" />
 
-            <fragment
-                android:id="@+id/post2"
-                android:name="vn.edu.usth.facebookclient.PostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
-            <fragment
-                android:id="@+id/post3"
-                android:name="vn.edu.usth.facebookclient.PostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/create_cap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rectangle"
+                        android:gravity="center_vertical|left|start"
+                        android:text="  What's on your mind?" />
 
-            <fragment
-                android:id="@+id/post4"
-                android:name="vn.edu.usth.facebookclient.PostFragment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
 
-            <fragment
-                android:id="@+id/post5"
-                android:name="vn.edu.usth.facebookclient.PostFragment"
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/button2"
+                        android:layout_width="147dp"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/live" />
+
+                    <Button
+                        android:id="@+id/button6"
+                        android:layout_width="147dp"
+                        android:layout_height="48dp"
+                        android:text="Photo" />
+
+                    <Button
+                        android:id="@+id/button7"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Room" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/blank"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/avatar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="129dp"
+                            android:layout_height="46dp"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:text="LQN" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="12h" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dots"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gonna dieeeeee" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="251dp"
+                    android:src="@drawable/demo" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="43dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/like" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="87dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/comment" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="88dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/share" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/avatar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="129dp"
+                            android:layout_height="46dp"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:text="LTH" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="3h" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dots"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dyinggggg" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="251dp"
+                    android:src="@drawable/download" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="43dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/like" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="87dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/comment" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="88dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/share" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/avatar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="129dp"
+                            android:layout_height="46dp"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:text="@DTK" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="4m" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dots"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Still dyinggggg" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="43dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/like" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="87dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/comment" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="88dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/share" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="51dp"
+                        android:layout_height="51dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/avatar" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="129dp"
+                            android:layout_height="46dp"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:text="NTT" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Just now" />
+
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dots"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yayyyyyy" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="251dp"
+                    android:src="@drawable/Capture" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="43dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/like" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="87dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/comment" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="88dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/share" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp"
+                    android:background="@color/cardview_dark_background"
+                    android:text=""/>
+            </LinearLayout>
+
+
+
         </LinearLayout>
     </ScrollView>
 
