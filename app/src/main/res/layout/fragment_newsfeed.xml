@@ -291,7 +291,7 @@
                             android:layout_height="46dp"
                             android:layout_weight="1"
                             android:textStyle="bold"
-                            android:text="@DTK" />
+                            android:text="DTK" />
 
                         <TextView
                             android:layout_width="wrap_content"
