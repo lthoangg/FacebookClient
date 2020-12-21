@@ -11,40 +11,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/logo" />
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_alignParentRight="true"
-            android:paddingRight="5dp">
-
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_margin="1dp"
-                android:adjustViewBounds="true"
-                android:background="@drawable/circular_background_grey"
-                android:scaleType="centerCrop"
-                android:src="@drawable/search_ic" />
-
-            <TextView
-                android:layout_width="3dp"
-                android:layout_height="0dp"/>
-            <ImageButton
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_margin="1dp"
-                android:adjustViewBounds="true"
-                android:background="@drawable/circular_background_grey"
-                android:scaleType="centerCrop"
-                android:src="@drawable/messenger_ic" />
-        </LinearLayout>
-
-
-    </RelativeLayout>
 </androidx.appcompat.widget.Toolbar>
