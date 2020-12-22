@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background"
+    android:background="@color/darkgrey"
     tools:context=".NewsfeedFragment">
 
     <ScrollView
@@ -14,36 +14,43 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:background="@color/white">
+                android:background="@color/white"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="63dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:id="@+id/avatar"
-                        android:layout_width="51dp"
-                        android:layout_height="51dp"
-                        android:background="@drawable/avatar" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
 
+                        <ImageButton
+                            android:id="@+id/avatar"
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imageavatar" />
 
-                    <TextView
-                        android:id="@+id/create_cap"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/rectangle"
-                        android:gravity="center_vertical|left|start"
-                        android:text="  What's on your mind?" />
-
+                        <TextView
+                            android:id="@+id/create_cap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/avatar"
+                            android:background="@drawable/rectangle"
+                            android:gravity="center_vertical|left|start"
+                            android:text="  What's on your mind?" />
+                    </RelativeLayout>
 
                 </LinearLayout>
 
@@ -55,39 +62,36 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="59dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <ImageButton
-                        android:id="@+id/button2"
-                        android:layout_width="147dp"
+                    <Button
+                        android:layout_width="135dp"
                         android:layout_height="48dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/live" />
+                        android:text="Live" />
 
                     <Button
                         android:id="@+id/button6"
-                        android:layout_width="147dp"
+                        android:layout_width="135dp"
                         android:layout_height="48dp"
                         android:text="Photo" />
 
                     <Button
                         android:id="@+id/button7"
-                        android:layout_width="129dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="130dp"
+                        android:layout_height="48dp"
                         android:layout_weight="1"
                         android:text="Room" />
 
                 </LinearLayout>
-
-                <TextView
-                    android:id="@+id/blank"
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:background="@color/cardview_dark_background"
-                    android:text="" />
-
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/blank"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/darkgrey"
+                android:text="" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -95,87 +99,165 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="51dp"
-                        android:layout_height="51dp"
-                        android:layout_weight="0"
-                        android:background="@drawable/avatar" />
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <ImageButton
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imageavatar" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="129dp"
-                            android:layout_height="46dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:text="LQN" />
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="LQN"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="12h" />
+                            android:orientation="horizontal">
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="18 minutes ago"
+                                android:textSize="14dp" />
+                        </LinearLayout>
                     </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/dots"/>
-
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Gonna dieeeeee" />
+                    android:paddingLeft="10dp"
+                    android:text="I want to die"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
                     android:src="@drawable/demo" />
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="43dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/like" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="87dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/comment" />
+                        <ImageButton
+                            android:id="@+id/like"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="35dp"
+                            android:background="@drawable/like" />
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="88dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/share" />
+                        <TextView
+                            android:id="@+id/tlike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/like"
+                            android:paddingTop="6dp"
+                            android:text="Like" />
+
+                        <TextView
+                            android:id="@+id/spacer1"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_toRightOf="@id/tlike"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@+id/comment"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_toRightOf="@id/spacer1"
+                            android:background="@drawable/comment" />
+
+                        <TextView
+                            android:id="@+id/tcomment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/comment"
+                            android:paddingTop="6dp"
+                            android:text="Comment" />
+
+                        <TextView
+                            android:id="@+id/spacer2"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_toRightOf="@id/tcomment"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@+id/share"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toRightOf="@id/spacer2"
+                            android:background="@drawable/share" />
+
+                        <TextView
+                            android:id="@+id/tshare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/share"
+                            android:paddingTop="6dp"
+                            android:text="Share" />
+
+                    </RelativeLayout>
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="11dp"
-                    android:background="@color/cardview_dark_background"
-                    android:text=""/>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/darkgrey"
+                android:text="" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -183,87 +265,165 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="51dp"
-                        android:layout_height="51dp"
-                        android:layout_weight="0"
-                        android:background="@drawable/avatar" />
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <ImageButton
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imageavatar" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="129dp"
-                            android:layout_height="46dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:text="LTH" />
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="LQN"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="3h" />
+                            android:orientation="horizontal">
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="18 minutes ago"
+                                android:textSize="14dp" />
+                        </LinearLayout>
                     </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/dots"/>
-
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Dyinggggg" />
+                    android:paddingLeft="10dp"
+                    android:text="I want to die"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/download" />
+                    android:src="@drawable/demo" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="43dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/like" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="87dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/comment" />
+                        <ImageButton
+                            android:id="@id/like"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="35dp"
+                            android:background="@drawable/like" />
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="88dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/share" />
+                        <TextView
+                            android:id="@id/tlike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/like"
+                            android:paddingTop="6dp"
+                            android:text="Like" />
+
+                        <TextView
+                            android:id="@id/spacer1"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_toRightOf="@id/tlike"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/comment"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_toRightOf="@id/spacer1"
+                            android:background="@drawable/comment" />
+
+                        <TextView
+                            android:id="@id/tcomment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/comment"
+                            android:paddingTop="6dp"
+                            android:text="Comment" />
+
+                        <TextView
+                            android:id="@id/spacer2"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_toRightOf="@id/tcomment"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/share"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toRightOf="@id/spacer2"
+                            android:background="@drawable/share" />
+
+                        <TextView
+                            android:id="@id/tshare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/share"
+                            android:paddingTop="6dp"
+                            android:text="Share" />
+
+                    </RelativeLayout>
                 </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="11dp"
-                    android:background="@color/cardview_dark_background"
-                    android:text=""/>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/darkgrey"
+                android:text="" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -271,174 +431,497 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="51dp"
-                        android:layout_height="51dp"
-                        android:layout_weight="0"
-                        android:background="@drawable/avatar" />
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <ImageButton
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imageavatar" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="129dp"
-                            android:layout_height="46dp"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:text="@DTK" />
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="LQN"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
                             android:layout_weight="1"
-                            android:text="4m" />
+                            android:orientation="horizontal">
 
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="18 minutes ago"
+                                android:textSize="14dp" />
+                        </LinearLayout>
                     </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/dots"/>
-
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Still dyinggggg" />
-
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:orientation="horizontal">
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="43dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/like" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="87dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/comment" />
-
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="88dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/share" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="11dp"
-                    android:background="@color/cardview_dark_background"
-                    android:text=""/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="64dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="51dp"
-                        android:layout_height="51dp"
-                        android:layout_weight="0"
-                        android:background="@drawable/avatar" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="129dp"
-                            android:layout_height="46dp"
-                            android:layout_weight="1"
-                            android:textStyle="bold"
-                            android:text="NTT" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:text="Just now" />
-
-                    </LinearLayout>
-
-                    <ImageButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/dots"/>
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Yayyyyyy" />
+                    android:paddingLeft="10dp"
+                    android:text="I want to die"
+                    android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/attendance" />
+                    android:src="@drawable/demo" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@id/like"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="35dp"
+                            android:background="@drawable/like" />
+
+                        <TextView
+                            android:id="@id/tlike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/like"
+                            android:paddingTop="6dp"
+                            android:text="Like" />
+
+                        <TextView
+                            android:id="@id/spacer1"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_toRightOf="@id/tlike"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/comment"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_toRightOf="@id/spacer1"
+                            android:background="@drawable/comment" />
+
+                        <TextView
+                            android:id="@+id/tcomment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/comment"
+                            android:paddingTop="6dp"
+                            android:text="Comment" />
+
+                        <TextView
+                            android:id="@id/spacer2"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_toRightOf="@id/tcomment"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/share"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toRightOf="@id/spacer2"
+                            android:background="@drawable/share" />
+
+                        <TextView
+                            android:id="@id/tshare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/share"
+                            android:paddingTop="6dp"
+                            android:text="Share" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/darkgrey"
+                android:text="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
                     android:orientation="horizontal">
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="43dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/like" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="87dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/comment" />
+                        <ImageButton
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imageavatar" />
 
-                    <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_marginStart="88dp"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/share" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="LQN"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="18 minutes ago"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="11dp"
-                    android:background="@color/cardview_dark_background"
-                    android:text=""/>
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="I want to die"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="251dp"
+                    android:src="@drawable/demo" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@id/like"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="35dp"
+                            android:background="@drawable/like" />
+
+                        <TextView
+                            android:id="@id/tlike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/like"
+                            android:paddingTop="6dp"
+                            android:text="Like" />
+
+                        <TextView
+                            android:id="@id/spacer1"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_toRightOf="@id/tlike"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/comment"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_toRightOf="@id/spacer1"
+                            android:background="@drawable/comment" />
+
+                        <TextView
+                            android:id="@id/tcomment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/comment"
+                            android:paddingTop="6dp"
+                            android:text="Comment" />
+
+                        <TextView
+                            android:id="@id/spacer2"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_toRightOf="@id/tcomment"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/share"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toRightOf="@id/spacer2"
+                            android:background="@drawable/share" />
+
+                        <TextView
+                            android:id="@id/tshare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/share"
+                            android:paddingTop="6dp"
+                            android:text="Share" />
+
+                    </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/darkgrey"
+                android:text="" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <ImageButton
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imageavatar" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="LQN"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="18 minutes ago"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="I want to die"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="251dp"
+                    android:src="@drawable/demo" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@id/like"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="35dp"
+                            android:background="@drawable/like" />
+
+                        <TextView
+                            android:id="@id/tlike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/like"
+                            android:paddingTop="6dp"
+                            android:text="Like" />
+
+                        <TextView
+                            android:id="@id/spacer1"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_toRightOf="@id/tlike"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/comment"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_toRightOf="@id/spacer1"
+                            android:background="@drawable/comment" />
+
+                        <TextView
+                            android:id="@id/tcomment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/comment"
+                            android:paddingTop="6dp"
+                            android:text="Comment" />
+
+                        <TextView
+                            android:id="@id/spacer2"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_toRightOf="@id/tcomment"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/share"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toRightOf="@id/spacer2"
+                            android:background="@drawable/share" />
+
+                        <TextView
+                            android:id="@id/tshare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/share"
+                            android:paddingTop="6dp"
+                            android:text="Share" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/darkgrey"
+                android:text="" />
         </LinearLayout>
     </ScrollView>
 
