@@ -329,7 +329,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/download" />
+                    android:src="@drawable/img2430" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -496,7 +496,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/demo" />
+                    android:src="@drawable/download" />
 
                 <ImageView
                     android:layout_width="match_parent"
