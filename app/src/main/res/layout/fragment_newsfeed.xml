@@ -65,22 +65,24 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <Button
+                    <TextView
                         android:layout_width="135dp"
                         android:layout_height="48dp"
+                        android:gravity="center"
                         android:text="Live" />
 
-                    <Button
+                    <TextView
                         android:id="@+id/button6"
                         android:layout_width="135dp"
                         android:layout_height="48dp"
+                        android:gravity="center"
                         android:text="Photo" />
 
-                    <Button
+                    <TextView
                         android:id="@+id/button7"
                         android:layout_width="130dp"
                         android:layout_height="48dp"
-                        android:layout_weight="1"
+                        android:gravity="center"
                         android:text="Room" />
 
                 </LinearLayout>
@@ -159,13 +161,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="I want to die"
+                    android:text="I want to die \n"
                     android:textColor="@color/black" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="251dp"
-                    android:src="@drawable/demo" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -279,7 +277,7 @@
                             android:layout_height="52dp"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/imageavatar" />
+                            android:src="@drawable/lth" />
 
                     </RelativeLayout>
 
@@ -299,7 +297,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="bottom"
-                                android:text="LQN"
+                                android:text="LTH"
                                 android:textColor="@color/black"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
@@ -315,7 +313,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="18 minutes ago"
+                                android:text="Just now"
                                 android:textSize="14dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -325,13 +323,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="I want to die"
+                    android:text="Dyingg"
                     android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/demo" />
+                    android:src="@drawable/img2430" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -350,7 +348,7 @@
                         android:layout_height="wrap_content">
 
                         <ImageButton
-                            android:id="@id/like"
+                            android:id="@+id/like"
                             android:layout_width="35dp"
                             android:layout_height="30dp"
                             android:layout_alignParentLeft="true"
@@ -358,7 +356,7 @@
                             android:background="@drawable/like" />
 
                         <TextView
-                            android:id="@id/tlike"
+                            android:id="@+id/tlike"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_toRightOf="@id/like"
@@ -366,7 +364,7 @@
                             android:text="Like" />
 
                         <TextView
-                            android:id="@id/spacer1"
+                            android:id="@+id/spacer1"
                             android:layout_width="1dp"
                             android:layout_height="30dp"
                             android:layout_marginLeft="25dp"
@@ -375,7 +373,7 @@
                             android:text="" />
 
                         <ImageButton
-                            android:id="@id/comment"
+                            android:id="@+id/comment"
                             android:layout_width="35dp"
                             android:layout_height="30dp"
                             android:layout_marginStart="25dp"
@@ -383,7 +381,7 @@
                             android:background="@drawable/comment" />
 
                         <TextView
-                            android:id="@id/tcomment"
+                            android:id="@+id/tcomment"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_toRightOf="@id/comment"
@@ -391,7 +389,7 @@
                             android:text="Comment" />
 
                         <TextView
-                            android:id="@id/spacer2"
+                            android:id="@+id/spacer2"
                             android:layout_width="1dp"
                             android:layout_height="30dp"
                             android:layout_marginLeft="35dp"
@@ -400,7 +398,7 @@
                             android:text="" />
 
                         <ImageButton
-                            android:id="@id/share"
+                            android:id="@+id/share"
                             android:layout_width="35dp"
                             android:layout_height="30dp"
                             android:layout_marginStart="15dp"
@@ -408,7 +406,7 @@
                             android:background="@drawable/share" />
 
                         <TextView
-                            android:id="@id/tshare"
+                            android:id="@+id/tshare"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_toRightOf="@id/share"
@@ -416,6 +414,7 @@
                             android:text="Share" />
 
                     </RelativeLayout>
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -445,7 +444,7 @@
                             android:layout_height="52dp"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/imageavatar" />
+                            android:src="@drawable/dtk" />
 
                     </RelativeLayout>
 
@@ -465,7 +464,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="bottom"
-                                android:text="LQN"
+                                android:text="DTK"
                                 android:textColor="@color/black"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
@@ -481,7 +480,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="18 minutes ago"
+                                android:text="10 minutes ago"
                                 android:textSize="14dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -491,13 +490,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="I want to die"
+                    android:text="Same"
                     android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/demo" />
+                    android:src="@drawable/download" />
 
                 <ImageView
                     android:layout_width="match_parent"
@@ -611,7 +610,7 @@
                             android:layout_height="52dp"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/imageavatar" />
+                            android:src="@drawable/ntt" />
 
                     </RelativeLayout>
 
@@ -631,7 +630,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="bottom"
-                                android:text="LQN"
+                                android:text="NTT"
                                 android:textColor="@color/black"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
@@ -647,7 +646,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="18 minutes ago"
+                                android:text="December 21 at 9:10 PM"
                                 android:textSize="14dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -657,7 +656,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="I want to die"
+                    android:text="Dead"
                     android:textColor="@color/black" />
 
                 <ImageView
@@ -777,7 +776,7 @@
                             android:layout_height="52dp"
                             android:adjustViewBounds="true"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/imageavatar" />
+                            android:src="@drawable/d0tb7" />
 
                     </RelativeLayout>
 
@@ -797,7 +796,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:gravity="bottom"
-                                android:text="LQN"
+                                android:text="VVH"
                                 android:textColor="@color/black"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
@@ -813,7 +812,7 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="18 minutes ago"
+                                android:text="An hour ago"
                                 android:textSize="14dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -823,13 +822,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
-                    android:text="I want to die"
+                    android:text="Yayyyy"
                     android:textColor="@color/black" />
 
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="251dp"
-                    android:src="@drawable/demo" />
+                    android:src="@drawable/attendance" />
 
                 <ImageView
                     android:layout_width="match_parent"
