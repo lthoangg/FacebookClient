@@ -24,7 +24,7 @@ public class MenuFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_menu, container, false);
 
-        ImageView toProfile = v.findViewById(R.id.avatar2);
+        LinearLayout toProfile = v.findViewById(R.id.toProfile);
         toProfile.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
