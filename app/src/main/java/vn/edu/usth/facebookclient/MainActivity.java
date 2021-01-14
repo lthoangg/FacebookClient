@@ -4,14 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 
 import com.google.android.material.tabs.TabLayout;
+
+import vn.edu.usth.facebookclient.mainActivity.ViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Facebook client";

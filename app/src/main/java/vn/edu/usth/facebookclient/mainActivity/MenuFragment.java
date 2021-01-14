@@ -1,4 +1,4 @@
-package vn.edu.usth.facebookclient;
+package vn.edu.usth.facebookclient.mainActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,8 +8,10 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import vn.edu.usth.facebookclient.ProfileActivity;
+import vn.edu.usth.facebookclient.R;
 
 /**
  * A simple {@link Fragment} subclass.

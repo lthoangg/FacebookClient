@@ -19,3 +19,4 @@ public class ProfileActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 }
+
