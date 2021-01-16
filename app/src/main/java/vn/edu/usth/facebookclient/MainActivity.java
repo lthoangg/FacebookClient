@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private Toolbar toolbar;
     private TextView create_post;
+    private ImageButton button;
     private int[] tabIcons = {R.drawable.home, R.drawable.notifi, R.drawable.menu};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +39,18 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate()'ed");
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        button = (ImageButton) findViewById(R.id.search);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSearchActivity();
+            }
+        });
     }
-
+    public void openSearchActivity(){
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivities(new Intent[]{intent});
+    }
 
     @Override
     protected void onStart() {
