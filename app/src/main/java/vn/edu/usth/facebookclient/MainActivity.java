@@ -9,6 +9,8 @@ import android.util.Log;
 
 import com.google.android.material.tabs.TabLayout;
 
+import vn.edu.usth.facebookclient.mainActivity.ViewPagerAdapter;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "Facebook client";
 
@@ -40,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.i(TAG, "onStart()'ed");
+
+
+
     }
 
     @Override
@@ -52,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         Log.i(TAG, "onResume()'ed");
+
+
     }
 
     @Override

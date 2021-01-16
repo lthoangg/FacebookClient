@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/lightgrey"
     android:orientation="vertical"
-    tools:context=".MenuFragment">
+    tools:context=".mainActivity.MenuFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +32,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <ImageButton
+            <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:layout_alignParentRight="true"
@@ -48,19 +48,21 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/toProfile">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp">
 
-            <ImageButton
+            <ImageView
                 android:layout_width="52dp"
                 android:layout_height="52dp"
                 android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/imageavatar" />
+                android:src="@drawable/imageavatar"
+                android:id="@+id/avatar2"/>
 
         </RelativeLayout>
 
@@ -104,9 +106,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="80dp"
             android:layout_marginVertical="4dp"
-            android:layout_weight="5"
             android:orientation="horizontal">
 
             <TextView
@@ -117,8 +118,9 @@
                 android:layout_weight="1"
                 android:background="@drawable/rectangle_background_white"
                 android:gravity="center"
-                android:text="Friends"
-                android:textSize="24dp" />
+                android:text="@string/friends"
+                android:textSize="24dp"
+                android:id="@+id/toFriends"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -128,116 +130,17 @@
                 android:layout_weight="1"
                 android:background="@drawable/rectangle_background_white"
                 android:gravity="center"
-                android:text="Groups"
-                android:textSize="24dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginVertical="4dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/rectangle_background_white"
-                android:gravity="center"
-                android:text="Videos"
-                android:textSize="24dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="24dp"
-                android:layout_weight="1"
-                android:background="@drawable/rectangle_background_white"
-                android:gravity="center"
-                android:text="Memories"
-                android:textSize="24dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginVertical="4dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/rectangle_background_white"
-                android:gravity="center"
-                android:text="Saved"
-                android:textSize="24dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="24dp"
-                android:layout_weight="1"
-                android:background="@drawable/rectangle_background_white"
-                android:gravity="center"
-                android:text="Pages"
-                android:textSize="24dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginVertical="4dp"
-            android:layout_weight="2"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="4dp"
-                android:layout_weight="1"
-                android:background="@drawable/rectangle_background_white"
-                android:gravity="center"
-                android:text="Dating"
-                android:textSize="24dp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="4dp"
-                android:layout_marginRight="24dp"
-                android:layout_weight="1"
-                android:background="@drawable/rectangle_background_white"
-                android:gravity="center"
-                android:text="Events"
-                android:textSize="24dp" />
+                android:text="@string/picture"
+                android:textSize="24dp"
+                android:id="@+id/toPicture"/>
         </LinearLayout>
     </LinearLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="96dp"
+        android:layout_height="42dp"
         android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="2dp"
-            android:layout_weight="1"
-            android:background="@color/grey"
-            android:gravity="center"
-            android:text="Settings &amp; Privacy"
-            android:textColor="@color/black"
-            android:textSize="24dp" />
 
         <TextView
             android:layout_width="match_parent"
