@@ -9,7 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include layout="@layout/appbar" />
+    <include layout="@layout/appbar"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
