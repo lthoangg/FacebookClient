@@ -1,4 +1,4 @@
-package vn.edu.usth.facebookclient;
+package vn.edu.usth.facebookclient.mainActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
+import vn.edu.usth.facebookclient.CreatePostActivity;
+import vn.edu.usth.facebookclient.R;
 
 /**
  * A simple {@link Fragment} subclass.
