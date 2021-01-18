@@ -21,6 +21,4 @@
 
         <include layout="@layout/search_test" />
     </LinearLayout>
-
-
 </RelativeLayout>
