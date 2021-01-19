@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
@@ -22,9 +23,11 @@ public class DBHandler extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + COLUMN_ID + "INTEGER PRIMARYKEY" + COLUMN_CAPTION + "TEXT" + ")";
+        String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + COLUMN_CAPTION + " VARCHAR" + ")";
         db.execSQL(CREATE_TABLE);
+        Log.i("DB Handler", "create table successfully");
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -46,10 +49,10 @@ public class DBHandler extends SQLiteOpenHelper {
         db.close();
         return result;
     }
-    public void addHandle(Post post){
+
+    public void addHandle(Post post) {
         ContentValues values = new ContentValues();
 
-        values.put(COLUMN_ID, post.getID());
         values.put(COLUMN_CAPTION, post.getCaption());
 
         SQLiteDatabase db = this.getWritableDatabase();
