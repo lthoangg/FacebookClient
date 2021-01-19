@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -186,13 +187,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageButton
+                        <com.like.LikeButton
                             android:id="@+id/like"
                             android:layout_width="35dp"
                             android:layout_height="30dp"
                             android:layout_alignParentLeft="true"
                             android:layout_marginStart="35dp"
-                            android:background="@drawable/like" />
+                            app:icon_type="thumb"></com.like.LikeButton>
 
                         <TextView
                             android:id="@+id/tlike"
@@ -253,8 +254,173 @@
                             android:text="Share" />
 
                     </RelativeLayout>
-
                 </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/darkgrey"
+                android:text="" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp">
+
+                        <ImageButton
+                            android:layout_width="52dp"
+                            android:layout_height="52dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/imageavatar" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="bottom"
+                                android:text="LQN"
+                                android:textColor="@color/black"
+                                android:textSize="16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="18 minutes ago"
+                                android:textSize="14dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="I want to die"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="251dp"
+                    android:src="@drawable/demo" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.like.LikeButton
+                            android:id="@id/like"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginStart="35dp"
+                            app:icon_type="thumb" />
+
+                        <TextView
+                            android:id="@id/tlike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/like"
+                            android:paddingTop="6dp"
+                            android:text="Like" />
+
+                        <TextView
+                            android:id="@id/spacer1"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_toRightOf="@id/tlike"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/comment"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="25dp"
+                            android:layout_toRightOf="@id/spacer1"
+                            android:background="@drawable/comment" />
+
+                        <TextView
+                            android:id="@id/tcomment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/comment"
+                            android:paddingTop="6dp"
+                            android:text="Comment" />
+
+                        <TextView
+                            android:id="@id/spacer2"
+                            android:layout_width="1dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_toRightOf="@id/tcomment"
+                            android:background="@color/white"
+                            android:text="" />
+
+                        <ImageButton
+                            android:id="@id/share"
+                            android:layout_width="35dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_toRightOf="@id/spacer2"
+                            android:background="@drawable/share" />
+
+                        <TextView
+                            android:id="@id/tshare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/share"
+                            android:paddingTop="6dp"
+                            android:text="Share" />
+                    </RelativeLayout>
+                </LinearLayout>
+
             </LinearLayout>
 
             <TextView
