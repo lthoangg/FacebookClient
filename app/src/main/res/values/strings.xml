@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Facebook Client</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="friends">Friends</string>
+    <string name="picture">Pictures</string>
+    <!-- TODO: Remove or change this placeholder text -->
 </resources>
