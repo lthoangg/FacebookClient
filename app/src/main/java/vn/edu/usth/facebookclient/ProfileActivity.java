@@ -5,7 +5,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 public class ProfileActivity extends AppCompatActivity {
     private final String TAG = "Profile Acitivity";
@@ -17,6 +16,15 @@ public class ProfileActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate()'ed");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
+
+    public static class PostActivity extends AppCompatActivity {
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_post1);
+        }
     }
 }
 

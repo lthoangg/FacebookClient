@@ -11,11 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FacebookClient"
         tools:replace="android:label">
-        <activity android:name=".ProfileActivity"
-            android:theme="@style/Theme.FacebookClient">
-
-        </activity>
-        <activity android:name=".CreatePostActivity"></activity>
+        <activity android:name=".Post2Activity"></activity>
+        <activity android:name=".Post1Activity" />
+        <activity android:name=".ProfileActivity$PostActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:theme="@style/Theme.FacebookClient" />
+        <activity android:name=".CreatePostActivity" />
         <activity android:name=".MainActivity">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +25,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
