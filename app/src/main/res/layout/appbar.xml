@@ -24,6 +24,7 @@
             android:paddingRight="5dp">
 
             <ImageButton
+                android:id="@+id/search"
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_margin="1dp"
