@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/darkgrey"
     tools:context=".NewsfeedFragment">
 
@@ -182,14 +183,14 @@
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-
-                        <ImageButton
-                            android:id="@+id/like"
+                        <com.like.LikeButton
                             android:layout_width="35dp"
                             android:layout_height="30dp"
+                            app:icon_type="thumb"
+                            android:id="@+id/like"
                             android:layout_alignParentLeft="true"
-                            android:layout_marginStart="35dp"
-                            android:background="@drawable/like" />
+                            android:layout_marginStart="35dp">
+                        </com.like.LikeButton>
 
                         <TextView
                             android:id="@+id/tlike"
@@ -349,13 +350,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageButton
-                            android:id="@id/like"
+                        <com.like.LikeButton
                             android:layout_width="35dp"
                             android:layout_height="30dp"
+                            app:icon_type="thumb"
+                            android:id="@id/like"
                             android:layout_alignParentLeft="true"
-                            android:layout_marginStart="35dp"
-                            android:background="@drawable/like" />
+                            android:layout_marginStart="35dp">
+                        </com.like.LikeButton>
 
                         <TextView
                             android:id="@id/tlike"
@@ -515,13 +517,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageButton
-                            android:id="@id/like"
+                        <com.like.LikeButton
                             android:layout_width="35dp"
                             android:layout_height="30dp"
+                            app:icon_type="thumb"
+                            android:id="@id/like"
                             android:layout_alignParentLeft="true"
-                            android:layout_marginStart="35dp"
-                            android:background="@drawable/like" />
+                            android:layout_marginStart="35dp">
+                        </com.like.LikeButton>
 
                         <TextView
                             android:id="@id/tlike"
@@ -681,13 +684,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageButton
-                            android:id="@id/like"
+                        <com.like.LikeButton
                             android:layout_width="35dp"
                             android:layout_height="30dp"
+                            app:icon_type="thumb"
+                            android:id="@id/like"
                             android:layout_alignParentLeft="true"
-                            android:layout_marginStart="35dp"
-                            android:background="@drawable/like" />
+                            android:layout_marginStart="35dp">
+                        </com.like.LikeButton>
 
                         <TextView
                             android:id="@id/tlike"
@@ -847,13 +851,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-                        <ImageButton
-                            android:id="@id/like"
-                            android:layout_width="35dp"
+                        <com.like.LikeButton
+                            android:layout_width="30dp"
                             android:layout_height="30dp"
+                            app:icon_type="thumb"
+                            android:id="@id/like"
                             android:layout_alignParentLeft="true"
-                            android:layout_marginStart="35dp"
-                            android:background="@drawable/like" />
+                            android:layout_marginStart="35dp">
+                        </com.like.LikeButton>
 
                         <TextView
                             android:id="@id/tlike"

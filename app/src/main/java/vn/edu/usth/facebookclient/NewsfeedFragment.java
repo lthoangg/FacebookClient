@@ -1,6 +1,7 @@
 package vn.edu.usth.facebookclient;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -37,6 +38,8 @@ public class NewsfeedFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+
         return v;
     }
 
