@@ -428,8 +428,6 @@
                 android:layout_height="8dp"
                 android:background="@color/darkgrey"
                 android:text="" />
-
-
         </LinearLayout>
     </ScrollView>
 

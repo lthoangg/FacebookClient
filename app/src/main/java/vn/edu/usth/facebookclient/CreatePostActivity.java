@@ -37,8 +37,6 @@ public class CreatePostActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 createPost(v);
-                Toast.makeText(getApplicationContext(), "Create post successfully",Toast.LENGTH_SHORT).show();
-
             }
         });
     }
@@ -49,6 +47,7 @@ public class CreatePostActivity extends AppCompatActivity {
         String caption = editText.getText().toString();
         Post new_post = new Post(caption);
         dbHandler.addHandle(new_post);
+        Toast.makeText(getApplicationContext(), "Create post successfully",Toast.LENGTH_SHORT).show();
     }
 
 }
