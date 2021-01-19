@@ -8,10 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -23,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private Toolbar toolbar;
-    private TextView create_post;
     private ImageButton button;
     private int[] tabIcons = {R.drawable.home, R.drawable.notifi, R.drawable.menu};
     @Override
@@ -40,28 +36,24 @@ public class MainActivity extends AppCompatActivity {
             tabLayout.getTabAt(i).setIcon(tabIcons[i]);
         }
         Log.i(TAG, "onCreate()'ed");
+
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         button = (ImageButton) findViewById(R.id.search);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSearchActivity();
+                Intent intent = new Intent(v.getContext(), SearchActivity.class);
+                startActivity(intent);
             }
         });
-    }
-    public void openSearchActivity(){
-        Intent intent = new Intent(this, SearchActivity.class);
-        startActivities(new Intent[]{intent});
     }
 
     @Override
     protected void onStart() {
         super.onStart();
         Log.i(TAG, "onStart()'ed");
-
-
-
     }
 
     @Override

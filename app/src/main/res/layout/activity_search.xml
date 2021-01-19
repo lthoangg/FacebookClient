@@ -19,6 +19,6 @@
             android:background="@drawable/circular_background_white"
             android:src="@drawable/back_button" />
 
-        <include layout="@layout/search_test" />
+        <include layout="@layout/searchbar" />
     </LinearLayout>
 </RelativeLayout>

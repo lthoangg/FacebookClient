@@ -13,14 +13,14 @@ public class CreatePostActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        back_btn = (ImageView) findViewById(R.id.back_btn);
-        back_btn.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
+//        back_btn = (ImageView) findViewById(R.id.back_btn);
+//        back_btn.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(v.getContext(), MainActivity.class);
+//                startActivity(intent);
+//            }
+//        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_post);
     }
