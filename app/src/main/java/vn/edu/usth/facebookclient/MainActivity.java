@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate()'ed");
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         button = (ImageButton) findViewById(R.id.search);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void openSearchActivity(){
         Intent intent = new Intent(this, SearchActivity.class);
-        startActivities(new Intent[]{intent});
+        startActivity(intent);
     }
 
     @Override
