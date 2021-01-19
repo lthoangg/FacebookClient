@@ -9,14 +9,14 @@ import android.widget.ImageButton;
 
 public class SearchActivity extends AppCompatActivity {
 
-    private ImageButton button;
+    private ImageButton searchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        button = (ImageButton) findViewById(R.id.back);
-        button.setOnClickListener(new View.OnClickListener() {
+        searchButton = findViewById(R.id.back);
+        searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openSearchActivity();
