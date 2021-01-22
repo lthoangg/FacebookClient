@@ -7,14 +7,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import vn.edu.usth.facebookclient.R;
-
 public class SearchActivity extends AppCompatActivity {
+
+    private ImageButton searchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        searchButton = findViewById(R.id.back);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSearchActivity();
+            }
+        });
+    }
 
+    public void openSearchActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivities(new Intent[]{intent});
     }
 }
