@@ -3,5 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/round_rectangle_grey">
+    android:background="@drawable/round_rectangle_grey"
+    app:searchIcon="@android:color/transparent"
+    app:queryHint="@string/search_hint">
 </androidx.appcompat.widget.SearchView>
