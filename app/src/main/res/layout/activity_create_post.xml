@@ -11,41 +11,44 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60px"
+        android:layout_height="56dp"
         android:layout_marginBottom="0dp"
         android:orientation="horizontal"
         android:paddingLeft="20px">
 
         <ImageView
             android:id="@+id/back_btn"
-            android:layout_width="30px"
-            android:layout_height="30px"
+            android:layout_width="60px"
+            android:layout_height="50px"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/baseline_arrow_back_ios_black_18dp"></ImageView>
+            android:src="@drawable/back_button" />
 
-        <LinearLayout
-            android:layout_width="500px"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingRight="20px">
 
             <TextView
-                android:layout_width="200px"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="35px"
                 android:gravity="center_vertical"
-                android:paddingLeft="40px"
                 android:text="Create Post"
                 android:textColor="#000"
-                android:textSize="20px"></TextView>
+                android:textSize="45px" />
 
-            <TextView
-                android:layout_width="200px"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:paddingLeft="140px"
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
                 android:text="POST"
-                android:textColor="@color/blue"
-                android:textSize="20px"></TextView>
-        </LinearLayout>
+                android:textSize="35px"></Button>
+        </RelativeLayout>
     </LinearLayout>
 
     <View
@@ -56,9 +59,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:paddingLeft="50px"
+        android:paddingLeft="30px"
         android:paddingTop="50px">
 
         <ImageButton
@@ -94,15 +97,16 @@
     <EditText
         android:id="@+id/editable"
         android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:hint="What are you thinking of..?"
+        android:layout_height="wrap_content"
         android:inputType="text"
-        android:paddingLeft="50px"></EditText>
+        android:layout_marginLeft="30px"
+        android:background="@android:color/transparent"
+        android:hint="What are you thinking of..?"></EditText>
 
-    <Button
-        android:id="@+id/upload"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:text="Upload" />
+<!--    <Button-->
+<!--        android:id="@+id/upload"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:text="Upload" />-->
 </LinearLayout>

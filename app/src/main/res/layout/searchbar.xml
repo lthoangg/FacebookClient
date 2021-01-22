@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.SearchView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/round_rectangle_grey"
+    app:searchIcon="@android:color/transparent"
+    app:queryHint="@string/search_hint">
+</androidx.appcompat.widget.SearchView>
