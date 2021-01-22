@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 
 public class ProfileActivity extends AppCompatActivity {
     private final String TAG = "Profile Acitivity";
@@ -22,6 +23,10 @@ public class ProfileActivity extends AppCompatActivity {
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
+            //Receive image from intent
+            int image = getIntent().getIntExtra("image", R.drawable.attendance);
+            ImageView ava = (ImageView) findViewById(R.id.imageView3);
+            ava.setImageResource(image);
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_post1);
         }
