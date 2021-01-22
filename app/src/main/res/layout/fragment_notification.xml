@@ -169,6 +169,7 @@
             </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/noti1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -239,6 +240,7 @@
             </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/noti2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
