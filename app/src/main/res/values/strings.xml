@@ -5,5 +5,8 @@
     <string name="friends">Friends</string>
     <string name="picture">Pictures</string>
     <string name="search_hint">Search</string>
+    <string name="facebook_app_id">441471590552331</string>
+    <string name="fb_login_protocol_scheme">fb441471590552331</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 </resources>

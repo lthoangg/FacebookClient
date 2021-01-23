@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="vn.edu.usth.facebookclient">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,23 +13,41 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FacebookClient"
         tools:replace="android:label">
-
-        <activity android:name=".ProfileActivity"
-            android:theme="@style/Theme.FacebookClient">
-        </activity>
-        <activity android:name=".CreatePostActivity">
-
-        </activity>
-        <activity android:name=".SearchActivity">
-
-        </activity>
-        <activity android:name=".Post2Activity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:theme="@style/Theme.FacebookClient" />
+        <activity android:name=".CreatePostActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".Post2Activity" />
         <activity android:name=".Post1Activity" />
         <activity android:name=".ProfileActivity$PostActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"/>
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
     </application>

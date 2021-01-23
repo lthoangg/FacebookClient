@@ -142,7 +142,9 @@
         android:layout_height="42dp"
         android:orientation="vertical">
 
-        <TextView
+
+        <Button
+            android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="2dp"
