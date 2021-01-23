@@ -47,7 +47,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
                 android:text="POST"
-                android:textSize="35px"></Button>
+                android:textSize="35px" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:text="Luu Quy Nhon"
-                android:textColor="@color/black"></TextView>
+                android:textColor="@color/black" />
 
             <Button
                 android:layout_width="96dp"
@@ -90,7 +90,7 @@
                 android:backgroundTint="@color/white"
                 android:text="Public"
                 android:textColor="@color/black"
-                android:textSize="10dp"></Button>
+                android:textSize="10dp" />
         </LinearLayout>
     </LinearLayout>
 
@@ -98,15 +98,49 @@
         android:id="@+id/editable"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="text"
         android:layout_marginLeft="30px"
         android:background="@android:color/transparent"
-        android:hint="What are you thinking of..?"></EditText>
+        android:hint="What are you thinking of..?"
+        android:inputType="text" />
 
-<!--    <Button-->
-<!--        android:id="@+id/upload"-->
-<!--        android:layout_width="150dp"-->
-<!--        android:layout_height="50dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:text="Upload" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top">
+
+        <ImageView
+            android:id="@+id/image_contain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="20px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to your post"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:onClick="openCamera"
+            android:src="@drawable/image_ic" />
+    </RelativeLayout>
+
 </LinearLayout>
