@@ -361,7 +361,8 @@
                             android:layout_height="30dp"
                             android:layout_alignParentLeft="true"
                             android:layout_marginStart="35dp"
-                            app:icon_type="thumb" />
+                            app:icon_type="thumb"
+                            android:layout_marginLeft="35dp" />
 
                         <TextView
                             android:id="@id/tlike"
@@ -386,7 +387,8 @@
                             android:layout_height="30dp"
                             android:layout_marginStart="25dp"
                             android:layout_toRightOf="@id/spacer1"
-                            android:background="@drawable/comment" />
+                            android:background="@drawable/comment"
+                            android:layout_marginLeft="25dp" />
 
                         <TextView
                             android:id="@id/tcomment"
@@ -411,7 +413,8 @@
                             android:layout_height="30dp"
                             android:layout_marginStart="15dp"
                             android:layout_toRightOf="@id/spacer2"
-                            android:background="@drawable/share" />
+                            android:background="@drawable/share"
+                            android:layout_marginLeft="15dp" />
 
                         <TextView
                             android:id="@id/tshare"
