@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="25px">
+        android:gravity="center_vertical">
 
         <ImageButton
             android:id="@+id/back"
@@ -20,11 +20,14 @@
             android:src="@drawable/back_button" />
 
         <SearchView
+            android:layout_marginRight="10dp"
             android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@drawable/round_rectangle_grey"
-            android:searchIcon="@android:color/transparent"
-            app:queryHint="@string/search_hint"/>
+            android:searchIcon="@null"
+            android:queryBackground="@null"
+            android:iconifiedByDefault="false"
+            android:queryHint="@string/search_hint"/>
     </LinearLayout>
 </RelativeLayout>
