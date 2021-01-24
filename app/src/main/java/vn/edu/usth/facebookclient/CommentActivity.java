@@ -26,9 +26,9 @@ public class CommentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_comment);
 
-        content = new String[]{"This is a comment", "This is another comment"};
-        username = new String[]{"LQN", "DTK"};
-        time = new String[]{"5h", "69h"};
+        content = new String[]{"This is a comment", "This is another comment", "Another oneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", "Another! =)))"};
+        username = new String[]{"LQN", "DTK", "LTH", "NTT"};
+        time = new String[]{"5h", "69h", "Just now", "1m"};
         int id = getResources().getIdentifier("drawable/d0tb7.jpg", null, null);
 
         for (int i = 0; i<content.length; i++){
@@ -39,7 +39,7 @@ public class CommentActivity extends AppCompatActivity {
             name.setText(username[i]);
             comment.setText(content[i]);
             comment_container.addView(comment_display);
-            Log.i("Comment", "onCreate()'ed");
+            Log.i("Comment", "Created");
         }
 
     }
