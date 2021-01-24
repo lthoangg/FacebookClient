@@ -3,7 +3,20 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/comment_container"
-    android:layout_marginTop="15dp"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/return_post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/blue"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/return_to_post" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
 </LinearLayout>

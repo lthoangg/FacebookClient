@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class CommentActivity extends AppCompatActivity {
 
@@ -19,7 +22,7 @@ public class CommentActivity extends AppCompatActivity {
     private TextView comment;
     private LinearLayout comment_display;
     private LinearLayout comment_container;
-    private String StringGenerated;
+    private TextView finish;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,14 @@ public class CommentActivity extends AppCompatActivity {
             comment_container.addView(comment_display);
             Log.i("Comment", "Created");
         }
+
+        finish = (TextView) findViewById(R.id.return_post);
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 }
