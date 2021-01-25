@@ -11,50 +11,714 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include layout="@layout/appbar"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <FrameLayout
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/circular_background_white"
+                android:src="@drawable/back_button" />
+
+            <SearchView
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/round_rectangle_grey"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@null"
+                android:queryHint="@string/search_hint"
+                android:searchIcon="@null" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="173dp"
-                android:background="@drawable/demo" />
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="89dp"
-                    android:text="" />
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp">
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="138dp"
-                    android:src="@drawable/avatar" />
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="173dp"
+                        android:layout_gravity="center|top"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/demo" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="31dp"
-                    android:gravity="center"
-                    android:text="Profile name" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="top"
+                        android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Bio" />
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="89dp" />
 
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/view2"
+                            android:layout_width="138dp"
+                            android:layout_height="138dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:elevation="12dp"
+                            app:cardCornerRadius="80dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="match_parent"
+                                android:layout_height="138dp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/imageavatar" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="Profile Name"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="Bio" />
+
+                        <TextView
+                            android:layout_width="379dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingTop="10dp"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_graduation_hat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Studied at Đại Học Khoa Học và Công Nghệ Hà Nội - USTH"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_home_ic" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Lives in Hanoi, Vietnam"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_location" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="From Hanoi, Vietnam"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="20dp">
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_heart" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Single"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/grey" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:text="Friends"
+                                android:textColor="@color/black"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="358 friends"
+                                android:textSize="16sp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="115dp"
+                                        android:layout_height="115dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/imageavatar" />
+                                    </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:text="Name"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="2dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="115dp"
+                                        android:layout_height="115dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/imageavatar" />
+                                    </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:text="Name"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="2dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="115dp"
+                                        android:layout_height="115dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/imageavatar" />
+                                    </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:text="Name"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="115dp"
+                                        android:layout_height="115dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/imageavatar" />
+                                    </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:text="Name"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="2dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="115dp"
+                                        android:layout_height="115dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/imageavatar" />
+                                    </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:text="Name"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginLeft="2dp">
+
+                                    <androidx.cardview.widget.CardView
+                                        android:layout_width="115dp"
+                                        android:layout_height="115dp"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:layout_marginTop="10dp"
+                                        android:elevation="12dp"
+                                        app:cardCornerRadius="10dp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <ImageView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/imageavatar" />
+                                    </androidx.cardview.widget.CardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/black"
+                                        android:textSize="15sp"
+                                        android:text="Name"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="See All Friends"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/blank"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="8dp"
+                            android:background="@color/darkgrey"
+                            android:text="" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Posts"
+                                android:textStyle="bold"
+                                android:textSize="20sp"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="5dp"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="63dp"
+                                    android:orientation="horizontal">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_margin="10dp">
+
+                                        <ImageButton
+                                            android:id="@+id/avatar"
+                                            android:layout_width="52dp"
+                                            android:layout_height="52dp"
+                                            android:adjustViewBounds="true"
+                                            android:scaleType="centerCrop"
+                                            android:src="@drawable/imageavatar" />
+
+                                        <TextView
+                                            android:id="@+id/create_cap"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="5dp"
+                                            android:layout_toRightOf="@id/avatar"
+                                            android:background="@drawable/rectangle"
+                                            android:gravity="center_vertical|left|start"
+                                            android:text="  What's on your mind?" />
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/line" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="135dp"
+                                        android:layout_height="48dp"
+                                        android:gravity="center"
+                                        android:text="Live" />
+
+                                    <TextView
+                                        android:id="@+id/button6"
+                                        android:layout_width="135dp"
+                                        android:layout_height="48dp"
+                                        android:gravity="center"
+                                        android:text="Photo" />
+
+                                    <TextView
+                                        android:id="@+id/button7"
+                                        android:layout_width="130dp"
+                                        android:layout_height="48dp"
+                                        android:gravity="center"
+                                        android:text="Room" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:background="@color/darkgrey"
+                            android:text="" />
+
+                        <LinearLayout
+                            android:id="@+id/post_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="60dp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="10dp">
+
+                                    <ImageButton
+                                        android:layout_width="52dp"
+                                        android:layout_height="52dp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="centerCrop"
+                                        android:src="@drawable/imageavatar" />
+
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:gravity="bottom"
+                                            android:text="LQN"
+                                            android:textColor="@color/black"
+                                            android:textSize="16dp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:text="18 minutes ago"
+                                            android:textSize="14dp" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:text="I want to die"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="251dp"
+                                android:src="@drawable/demo" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/line" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:paddingTop="10dp"
+                                android:paddingBottom="10dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.like.LikeButton
+                                        android:id="@id/like"
+                                        android:layout_width="35dp"
+                                        android:layout_height="30dp"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_marginStart="35dp"
+                                        app:icon_type="thumb"
+                                        android:layout_marginLeft="35dp" />
+
+                                    <TextView
+                                        android:id="@id/tlike"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_toRightOf="@id/like"
+                                        android:paddingTop="6dp"
+                                        android:text="Like" />
+
+                                    <TextView
+                                        android:id="@id/spacer1"
+                                        android:layout_width="1dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="25dp"
+                                        android:layout_toRightOf="@id/tlike"
+                                        android:background="@color/white"
+                                        android:text="" />
+
+                                    <ImageButton
+                                        android:id="@id/comment"
+                                        android:layout_width="35dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="25dp"
+                                        android:layout_toRightOf="@id/spacer1"
+                                        android:background="@drawable/comment"
+                                        android:layout_marginLeft="25dp" />
+
+                                    <TextView
+                                        android:id="@id/tcomment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_toRightOf="@id/comment"
+                                        android:paddingTop="6dp"
+                                        android:text="Comment" />
+
+                                    <TextView
+                                        android:id="@id/spacer2"
+                                        android:layout_width="1dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginLeft="35dp"
+                                        android:layout_toRightOf="@id/tcomment"
+                                        android:background="@color/white"
+                                        android:text="" />
+
+                                    <ImageButton
+                                        android:id="@id/share"
+                                        android:layout_width="35dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_toRightOf="@id/spacer2"
+                                        android:background="@drawable/share"
+                                        android:layout_marginLeft="15dp" />
+
+                                    <TextView
+                                        android:id="@id/tshare"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_toRightOf="@id/share"
+                                        android:paddingTop="6dp"
+                                        android:text="Share" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
             </LinearLayout>
-        </FrameLayout>
+        </ScrollView>
     </LinearLayout>
 </FrameLayout>

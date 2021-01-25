@@ -9,12 +9,14 @@ import android.util.Log;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.SearchView;
 
 
 public class ProfileActivity extends AppCompatActivity {
     private final String TAG = "Profile Acitivity";
 
-    private ImageButton searchButton;
+    private SearchView searchButton;
+    private ImageButton backButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +26,20 @@ public class ProfileActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        searchButton = findViewById(R.id.search);
+        searchButton = findViewById(R.id.search_bar);
         searchButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 toSearchActivity();
+            }
+        });
+
+        backButton = findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                startActivities(new Intent[]{intent});
             }
         });
     }
