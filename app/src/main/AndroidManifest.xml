@@ -13,12 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FacebookClient"
         tools:replace="android:label">
-        <activity android:name=".MainActivity" />
+        <activity android:name=".PostCommentActivity"></activity>
+        <activity android:name=".CreatePostActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".Post2Activity" />
         <activity android:name=".Post1Activity" />
+        <activity android:name=".CommentActivity" />
         <activity android:name=".ProfileActivity$PostActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter android:label="@string/app_name">
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +37,7 @@
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name"/>
+            android:label="@string/app_name" />
         <activity
             android:name="com.facebook.CustomTabActivity"
             android:exported="true">

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Comment_container"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/comment_container"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="6dp"
+                app:srcCompat="@drawable/d0tb7" />
+
+            <EditText
+                android:id="@+id/input_commment"
+                android:layout_width="288dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:ems="1000"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:hint="Write a comment"/>
+
+            <ImageButton
+                android:id="@+id/comment_submit"
+                android:layout_width="67dp"
+                android:layout_height="41dp"
+                android:layout_weight="1"
+                android:backgroundTint="#3b5998 "
+                app:srcCompat="@android:drawable/ic_menu_send" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
