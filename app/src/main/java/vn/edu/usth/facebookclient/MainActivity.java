@@ -13,7 +13,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.facebook.AccessToken;
+import com.facebook.login.LoginManager;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.Arrays;
 
 import vn.edu.usth.facebookclient.mainActivity.ViewPagerAdapter;
 
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 openSearchActivity();
             }
         });
+
     }
     public void openSearchActivity(){
         Intent intent = new Intent(this, SearchActivity.class);

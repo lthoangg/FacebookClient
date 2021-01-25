@@ -35,6 +35,8 @@ dependencies {
     implementation 'com.github.jd-alexander:LikeButton:0.2.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.room:room-runtime:2.2.5'
+    implementation 'com.facebook.android:facebook-android-sdk:[5,6)'
+    implementation 'com.facebook.android:facebook-login:[8.1)'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
