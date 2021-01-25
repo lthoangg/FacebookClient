@@ -5,14 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".Post1Activity">
-    <TextView
-        android:id="@+id/blank"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_height="60px"
         android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:background="@color/darkgrey"
-        android:text="" />
-
-
+        android:paddingLeft="20px"
+        android:layout_marginBottom="0dp">
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:src="@drawable/baseline_arrow_back_ios_black_18dp"
+            android:layout_gravity="center_vertical">
+        </ImageView>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="0dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
