@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 
 public class ProfileActivity extends AppCompatActivity {
@@ -17,6 +18,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private SearchView searchButton;
     private ImageButton backButton;
+    private TextView createcap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,20 +28,19 @@ public class ProfileActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        searchButton = findViewById(R.id.search_bar);
-        searchButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                toSearchActivity();
-            }
-        });
-
         backButton = findViewById(R.id.back);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
-                startActivities(new Intent[]{intent});
+                startActivity(intent);
+            }
+        });
+        createcap = findViewById(R.id.create_cap);
+        createcap.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfileActivity.this, CreatePostActivity.class));
             }
         });
     }
