@@ -6,14 +6,7 @@
     android:id="@+id/Comment_container"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/return_post"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/blue"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:text="@string/return_to_post" />
+    <include layout="@layout/appbar" />
 
     <TextView
         android:id="@+id/textView6"

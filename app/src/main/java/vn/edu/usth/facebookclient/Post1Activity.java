@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import com.facebook.AccessToken;
 import com.facebook.login.LoginManager;
@@ -15,16 +16,17 @@ import java.util.Arrays;
 
 public class Post1Activity extends AppCompatActivity {
     private ImageButton btn_comment;
+    private ImageView back_btn;
     protected void comment_view(){
-        Intent intent = new Intent(this, CommentActivity.class);
+        Intent intent = new Intent(Post1Activity.this, CommentActivity.class);
         startActivity(intent);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post1);
-        ImageView back_btn;
-        back_btn = (ImageView) findViewById(R.id.back_btn);
+
+        back_btn = findViewById(R.id.back);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

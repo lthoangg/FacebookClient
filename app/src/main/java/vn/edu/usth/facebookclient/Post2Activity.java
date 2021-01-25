@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class Post2Activity extends AppCompatActivity {
     private ImageButton btn_comment;
     protected void comment_view(){
-        Intent intent = new Intent(this, CommentActivity.class);
+        Intent intent = new Intent(Post2Activity.this, CommentActivity.class);
         startActivity(intent);
     }
     @Override
@@ -19,11 +19,13 @@ public class Post2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post2);
         ImageView back_btn;
-        back_btn = (ImageView) findViewById(R.id.back_btn);
+        back_btn = (ImageView) findViewById(R.id.back);
         back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Post2Activity.this, MainActivity.class));
+            };
+        });
         btn_comment = (ImageButton) findViewById(R.id.comment);
         btn_comment.setOnClickListener(new View.OnClickListener() {
             @Override

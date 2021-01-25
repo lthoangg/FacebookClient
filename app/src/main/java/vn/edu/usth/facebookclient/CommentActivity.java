@@ -25,7 +25,7 @@ public class CommentActivity extends AppCompatActivity {
     private TextView timestamp;
     private LinearLayout comment_display;
     private LinearLayout comment_container;
-    private TextView finish;
+    private ImageView finish;
     private ImageButton btn;
     private EditText u_content;
     private LinearLayout ln;
@@ -68,7 +68,7 @@ public class CommentActivity extends AppCompatActivity {
             Log.i("Comment", "Generated");
         }
 
-        finish = (TextView) findViewById(R.id.return_post);
+        finish = findViewById(R.id.back_btn);
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

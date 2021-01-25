@@ -56,7 +56,7 @@ public class ProfileActivity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             //Receive image from intent
             int image = getIntent().getIntExtra("image", R.drawable.attendance);
-            ImageView ava = (ImageView) findViewById(R.id.imageView3);
+            ImageView ava = (ImageView) findViewById(R.id.imageView);
             ava.setImageResource(image);
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_post1);
