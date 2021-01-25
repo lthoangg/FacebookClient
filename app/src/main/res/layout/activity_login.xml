@@ -6,19 +6,30 @@
     android:id="@+id/LoginActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#3b5998"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_marginTop="70dp"
+        app:srcCompat="@drawable/com_facebook_button_icon" />
+
     <TextView
         android:id="@+id/text"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Not logged in" />
+        android:layout_gravity="center"
+        android:text="" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="To Facebook"
         tools:ignore="MissingConstraints" />
 
@@ -26,6 +37,7 @@
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Logout"
         tools:ignore="MissingConstraints" />
 
