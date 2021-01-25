@@ -143,7 +143,7 @@
         android:orientation="vertical">
 
 
-        <Button
+        <TextView
             android:id="@+id/logout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
