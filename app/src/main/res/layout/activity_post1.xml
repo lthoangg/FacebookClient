@@ -183,5 +183,11 @@
 
             </RelativeLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/comment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
     </LinearLayout>
 </FrameLayout>

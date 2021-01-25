@@ -8,8 +8,18 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.SearchView;
+import android.widget.TextView;
+
+
 public class ProfileActivity extends AppCompatActivity {
     private final String TAG = "Profile Acitivity";
+
+    private SearchView searchButton;
+    private ImageButton backButton;
+    private TextView createcap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +28,26 @@ public class ProfileActivity extends AppCompatActivity {
         Log.i(TAG, "onCreate()'ed");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        backButton = findViewById(R.id.back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        createcap = findViewById(R.id.create_cap);
+        createcap.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ProfileActivity.this, CreatePostActivity.class));
+            }
+        });
+    }
+
+    private void toSearchActivity(){
+        startActivity(new Intent(ProfileActivity.this, SearchActivity.class));
     }
 
     public static class PostActivity extends AppCompatActivity {

@@ -2,60 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CreatePost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/CreatePost"
-    android:orientation="vertical"
     android:background="@color/white"
+    android:orientation="vertical"
     tools:context=".CreatePostActivity">
+
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_height="60px"
         android:layout_width="match_parent"
-        android:paddingLeft="20px"
-        android:layout_marginBottom="0dp">
+        android:layout_height="56dp"
+        android:layout_marginBottom="0dp"
+        android:orientation="horizontal"
+        android:paddingLeft="20px">
+
         <ImageView
             android:id="@+id/back_btn"
-            android:layout_width="30px"
-            android:layout_height="30px"
-            android:src="@drawable/baseline_arrow_back_ios_black_18dp"
-            android:layout_gravity="center_vertical">
-        </ImageView>
-        <LinearLayout
-            android:layout_width="500px"
+            android:layout_width="60px"
+            android:layout_height="50px"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/back_button" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-        <TextView
-            android:layout_width="200px"
-            android:layout_height="match_parent"
-            android:text="Create Post"
-            android:gravity="center_vertical"
-            android:textColor="#000"
-            android:paddingLeft="40px"
-            android:textSize="20px">
-        </TextView>
-        <TextView
-            android:layout_width="200px"
-            android:layout_height="match_parent"
-            android:text="POST"
-            android:gravity="center_vertical"
-            android:textColor="@color/blue"
-            android:paddingLeft="140px"
-            android:textSize="20px">
-        </TextView>
-        </LinearLayout>
+            android:orientation="horizontal"
+            android:paddingRight="20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="35px"
+                android:gravity="center_vertical"
+                android:text="Create Post"
+                android:textColor="#000"
+                android:textSize="45px" />
+
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="POST"
+                android:textSize="35px" />
+        </RelativeLayout>
     </LinearLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="0.1dp"
-        android:background="@android:color/darker_gray"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="0dp"
+        android:background="@android:color/darker_gray" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:orientation="horizontal"
-        android:paddingLeft="50px"
+        android:paddingLeft="30px"
         android:paddingTop="50px">
+
         <ImageButton
             android:id="@+id/avatar"
             android:layout_width="52dp"
@@ -63,32 +71,76 @@
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:src="@drawable/imageavatar" />
+
         <LinearLayout
             android:layout_width="400px"
             android:layout_height="52dp"
             android:orientation="vertical"
             android:paddingLeft="30px">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
                 android:text="Luu Quy Nhon"
-                android:textColor="@color/black">
-            </TextView>
+                android:textColor="@color/black" />
+
             <Button
                 android:layout_width="96dp"
                 android:layout_height="32dp"
-                android:text="Public"
                 android:backgroundTint="@color/white"
+                android:text="Public"
                 android:textColor="@color/black"
-                android:textSize="10dp">
-            </Button>
+                android:textSize="10dp" />
         </LinearLayout>
     </LinearLayout>
+
     <EditText
+        android:id="@+id/editable"
         android:layout_width="match_parent"
-        android:layout_height="100px"
-        android:paddingLeft="50px"
-        android:inputType="text"
-        android:hint="What are you thinking of..?">
-    </EditText>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:background="@android:color/transparent"
+        android:hint="What are you thinking of..?"
+        android:inputType="text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top">
+
+        <ImageView
+            android:id="@+id/image_contain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="20px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add to your post"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:onClick="openCamera"
+            android:src="@drawable/image_ic" />
+    </RelativeLayout>
+
 </LinearLayout>
