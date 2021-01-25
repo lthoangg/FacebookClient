@@ -22,6 +22,7 @@ public class CommentActivity extends AppCompatActivity {
     private ImageView avatar_pic;
     private TextView name;
     private TextView comment;
+    private TextView timestamp;
     private LinearLayout comment_display;
     private LinearLayout comment_container;
     private TextView finish;
@@ -58,9 +59,12 @@ public class CommentActivity extends AppCompatActivity {
             comment_display=(LinearLayout)this.getLayoutInflater().inflate(R.layout.comment,null);
             name = comment_display.findViewById(R.id.username);
             comment = comment_display.findViewById(R.id.comment);
+            timestamp = comment_display.findViewById(R.id.time);
             name.setText(username[i]);
             comment.setText(content[i]);
+            timestamp.setText(time[i]);
             comment_container.addView(comment_display);
+
             Log.i("Comment", "Generated");
         }
 
@@ -84,6 +88,7 @@ public class CommentActivity extends AppCompatActivity {
                 u_content.setText("");
 //                Intent reload = new Intent(getApplicationContext(), CommentActivity.class);
 //                startActivity(reload);
+                recreate();
             }
 
         });
